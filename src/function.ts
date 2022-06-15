@@ -1,13 +1,20 @@
-const dotenv = require("dotenv");
-const http = require("http");
-dotenv.config();  
+const http = require("http"); 
+const dotenv1 = require("dotenv");
+dotenv1.config();
 
-let newF = function math(input: number) {
+const request = require("superagent");
+
+let newF = async function math() {
     let answer;
-    fetch("http://localhost:3000/").then(response => {
-        answer = response;
+    await request
+    .get('http://localhost:3000/')
+    .then((response:any) => {
+        answer = JSON.parse(response.text).answer;
+    })
+    .catch((error:any) => {
+        console.log(error);
     })
     return answer;
 }
-console.log(newF(1));
+
 module.exports = newF
