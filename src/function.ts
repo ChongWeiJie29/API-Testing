@@ -4,17 +4,16 @@ dotenv1.config();
 
 const request = require("superagent");
 
-let newF = async function math() {
-    let answer;
-    await request
+async function math() {
+    let answer = await request
     .get('http://localhost:3000/')
     .then((response:any) => {
-        answer = JSON.parse(response.text).answer;
+        return JSON.parse(response.text).answer;
     })
     .catch((error:any) => {
-        console.log(error);
+        return error;
     })
     return answer;
 }
 
-module.exports = newF
+module.exports = math;

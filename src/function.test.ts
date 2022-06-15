@@ -1,6 +1,7 @@
 
-const func = require("./function"); 
+const newF = require("./function"); 
 
-test('test thing', () => {
-  expect(func()).toBe(2);
+test('test thing', async () => {
+  let answer = await newF();
+  expect(answer).toBe(2);
 });
