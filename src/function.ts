@@ -1,5 +1,5 @@
 let newF = function math(input: number) {
-    return input * 3;
+    return input * 10;
 }
 
 module.exports = newF
