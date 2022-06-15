@@ -1,4 +1,4 @@
 function newF(input:number) {
-    input *= 2
+    input *= 3
     return input;
 }
