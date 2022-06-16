@@ -6,7 +6,7 @@ const request = require("superagent");
 
 async function math() {
     let answer = await request
-    .get('http://localhost:3000/')
+    .get(`http://localhost:${process.env.PORT}/`)
     .then((response:any) => {
         return JSON.parse(response.text).answer;
     })
