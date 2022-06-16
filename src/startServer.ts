@@ -8,7 +8,7 @@ dotenv.config();
 
 app.get('/', (req:any, res:any) => {
     console.log("Request received.");
-    res.send({"answer":2});
+    res.send({"answer":20});
     console.log("Response sent");
 })
 
