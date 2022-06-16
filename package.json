@@ -7,7 +7,7 @@
     "test": "jest",
     "build": "tsc",
     "start": "ts-node ./src/function.ts",
-    "startTestServer": "set NODE_ENV=test&& ts-node ./src/startServer.ts"
+    "startTestServer": "ts-node ./src/startServer.ts"
   },
   "keywords": [],
   "author": "",

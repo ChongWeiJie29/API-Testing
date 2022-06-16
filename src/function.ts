@@ -1,6 +1,6 @@
 const http = require("http"); 
 const dotenv1 = require("dotenv");
-dotenv1.config({ path: `${process.env.NODE_ENV}.env` });
+dotenv1.config();
 
 const request = require("superagent");
 
