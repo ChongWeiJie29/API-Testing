@@ -25,10 +25,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: |
-        touch .env
-        echo PORT = ${{ secrets.PORT }} >> .env
+        touch test.env
+        echo PORT = ${{ secrets.PORT }} >> test.env
     - run: npm install
     - run: npm run build --if-present
     - run: |
-        npm run startServer & sleep 10
+        npm run startTestServer & sleep 10
         npm test

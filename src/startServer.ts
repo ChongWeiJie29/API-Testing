@@ -1,8 +1,10 @@
 const express = require('express')
 const app = express()
 
+const path = require('path');
+
 const dotenv = require("dotenv");
-dotenv.config();
+dotenv.config({ path: `${process.env.NODE_ENV}.env` });
 
 app.get('/', (req:any, res:any) => {
     console.log("Request received.");
