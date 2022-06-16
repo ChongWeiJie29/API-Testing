@@ -6,8 +6,7 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "start": "ts-node ./src/function.ts",
-    "startTestServer": "ts-node ./src/startServer.ts"
+    "start": "ts-node ./src/startServer.ts"
   },
   "keywords": [],
   "author": "",
